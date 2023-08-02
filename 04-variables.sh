@@ -22,7 +22,7 @@ echo $x
 
 #How to print the date in bash
 
-Date = "02AUG23"
+Date="02AUG23"
 echo $Date
 
 
