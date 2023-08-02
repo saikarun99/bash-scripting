@@ -5,6 +5,6 @@ a=45
 b=56
 c=xyz
 
-echo a
-echo b
-echo c
+echo $a
+echo $b
+echo $c
