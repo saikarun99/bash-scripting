@@ -16,4 +16,6 @@ echo $c
 
 # $a and ${a} both are same, prefer to use flower brackets
 
+echo $x
+
 
