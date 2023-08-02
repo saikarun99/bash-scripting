@@ -4,3 +4,7 @@
 echo -e "\e[33m I am in yellow color \e[0m"
 echo -e "\e[34m I am in my own color \e[0m"
 echo -e "\e[45m I am in my own color\e[0m"
+#to print something both background and foreground: here is the syntax:
+#echo -e "\e[backgroundcode;foregroundcode m your message \e[0m"
+
+echo -e "\e[43;34m I am printing both the colors \e[0m"
