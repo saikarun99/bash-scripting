@@ -17,5 +17,12 @@ echo $c
 # $a and ${a} both are same, prefer to use flower brackets
 
 echo $x
+#if you dont declare a variable and uses it then it gives null 
+#value when we attempt to print its value but it never throws any error
+
+#How to print the date in bash
+
+Date =020823
+echo $Date
 
 
