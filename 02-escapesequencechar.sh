@@ -5,3 +5,4 @@ echo -e "line1\nline2\nline3"
 
 # \t: this gives a tab space
 echo -e "cloud\tdevops\tare\tbooming"
+echo -e "we\nare\tlearning\tcloud\tdevops\n"
