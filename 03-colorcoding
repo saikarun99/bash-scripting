@@ -1,0 +1,4 @@
+#!/bin/bash
+#syntax to print the color
+#echo -e "\e[COLORCODEm Your msg to be printed in color \e[0m"
+echo -e "\e[33m I am in yellow color \e[0m"
