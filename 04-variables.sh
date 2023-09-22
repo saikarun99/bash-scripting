@@ -23,6 +23,6 @@ echo $x
 #How to print the date in bash
 
 Date="02AUG23"
-echo  today's date is $Date
+echo  "today's date is $Date"
 
 
