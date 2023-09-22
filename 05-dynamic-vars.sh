@@ -1,7 +1,8 @@
 #!/bin/bash
 
 DATE="$(date +%F)"
-echo "$DATE"
+echo "Todays date is $DATE"
+
 
 sessions_count=$(who | wc -l)
 
