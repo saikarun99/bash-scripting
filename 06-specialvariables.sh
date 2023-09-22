@@ -14,4 +14,5 @@ a=10
 b=30
 c=78
 
-echo "$*"
+echo $# #prints the no of arguments
+echo $$ #prints the current process.
