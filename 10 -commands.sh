@@ -13,3 +13,12 @@
 
 #THis is how we call function
 # f
+
+stat()
+{
+
+
+    echo "no of sessions opened are $(who | wc -l)"
+
+}
+stat
