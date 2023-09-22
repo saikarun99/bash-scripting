@@ -5,3 +5,6 @@
 echo $0
 
 echo "Name of the recently launched satellite in India $1"
+
+echo "popular EV vehicle in USA $2"
+
