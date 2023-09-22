@@ -24,5 +24,10 @@ echo $x
 
 Date="02AUG23"
 echo "todays date is $Date"
+#This is hardcoded
+
+DATE="$(date +%F)
+
+echo "DATE"
 
 
