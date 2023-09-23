@@ -53,15 +53,13 @@ action=$1
 if [ "$action" == "start" ]; then
     echo "starting payment service"
     exit 0
-
 elif [ "$action" == "stop" ]; then
-        echo "stoping payment service"
-        exit 1
-elif [ "$action" == "restart"]; then
-        echo "restarting payment service"
-        exit 2
+    echo "stoping payment service"
+    exit 1
+elif [ "$action" == "restart" ]; then
+    echo "restarting payment service"
+    exit 2
 else 
-
-echo "valid option is start only"
-exit 3
+    echo "valid option is start only"
+    exit 3
 fi
