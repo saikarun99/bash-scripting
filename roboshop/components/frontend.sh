@@ -2,6 +2,8 @@
 
 #validating the user is root user or not
 
+component=frontend
+LOGFILE=/tmp/${component}.log
 stat()
 {
 if [ $1 == 0 ]; then
@@ -26,14 +28,14 @@ echo "configuring frontend"
 
 echo "installing frontend"
 
-yum install nginx -y &>> /tmp/frontend.log
+yum install nginx -y &>> ${LOGFILE}
 
 
 stat $?
 
 echo "starting nginx"
- systemctl enable nginx &>> /tmp/frontend.log
- systemctl start nginx &>> /tmp/frontend.log
+ systemctl enable nginx &>> ${LOGFILE}
+ systemctl start nginx &>> ${LOGFILE}
  stat $?
 
 echo "downloading the frontend component"
@@ -41,13 +43,13 @@ echo "downloading the frontend component"
  stat $?
 
  echo "clean up of default front end"
- cd /usr/share/nginx/html &>> /tmp/frontend.log
- rm -rf * &>> /tmp/frontend.log
+ cd /usr/share/nginx/html &>> ${LOGFILE}
+ rm -rf * &>> ${LOGFILE}
 
  stat $?
 
  echo "extracting frontend"
- unzip /tmp/frontend.zip &>> /tmp/frontend.log
+ unzip /tmp/frontend.zip &>> ${LOGFILE}
  stat $?
 
  echo "sorting the frontend files"
