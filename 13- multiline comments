@@ -1,0 +1,6 @@
+#!/bin/bash
+echo "This is devops training"
+echo "I am sai karun"
+a=90
+
+echo $a
