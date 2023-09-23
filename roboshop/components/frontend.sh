@@ -32,7 +32,13 @@ else
        echo "start failed"
 fi
 
-# curl -s -L -o /tmp/frontend.zip "https://github.com/stans-robot-project/frontend/archive/main.zip"
+echo "downloading the frontend component"
+ curl -s -L -o /tmp/frontend.zip "https://github.com/stans-robot-project/frontend/archive/main.zip"
+ if [ $? == 0 ]; then
+       echo "successful"
+else 
+       echo "failed"
+fi
 # cd /usr/share/nginx/html
 # rm -rf *
 # unzip /tmp/frontend.zip
