@@ -1,6 +1,7 @@
 #!/bin/bash
+<<comment
 echo "This is devops training"
 echo "I am sai karun"
 a=90
-
+comment
 echo $a
