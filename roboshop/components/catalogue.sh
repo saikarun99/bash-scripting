@@ -52,7 +52,7 @@ sed -ie 's/MONGO_DNSNAME/172.31.38.68/' /home/${APPUSER}/${component}/systemd.se
 
 mv /home/${APPUSER}/${component}/systemd.service /etc/systemd/system/${component}.service
 
-echo "starting the ${component} service
+echo "starting the ${component} service"
 systemctl daemon-reload
 systemctl start ${component}
 systemctl enable ${component}
