@@ -48,11 +48,11 @@ echo "updating the ip- address"
  echo "downloading the schema"
 
  curl -s -L -o /tmp/mongodb.zip "https://github.com/stans-robot-project/mongodb/archive/main.zip"
- cd /tmp
- unzip mongodb.zip
- cd mongodb-main
- mongo < catalogue.js
- mongo < users.js
+ cd /tmp &>> ${LOGFILE}
+ unzip mongodb.zip &>> ${LOGFILE}
+ cd mongodb-main &>> ${LOGFILE}
+ mongo < catalogue.js &>> ${LOGFILE}
+ mongo < users.js &>> ${LOGFILE}
  stat $?
 
 
