@@ -17,7 +17,7 @@ echo "installing frontend"
 
 yum install nginx -y &>> /tmp/frontend.log
 
-if [ $? ==0 ]; then
+if [ $? == 0 ]; then
        echo "Installation successful"
 else 
        echo "Installation failed"
