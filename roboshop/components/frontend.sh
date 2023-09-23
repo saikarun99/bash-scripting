@@ -44,7 +44,7 @@ echo "downloading the frontend component"
  cd /usr/share/nginx/html &>> /tmp/frontend.log
  rm -rf * &>> /tmp/frontend.log
  echo "extracting frontend"
- unzip /tmp/frontend.zip
+ unzip /tmp/frontend.zip &>> /tmp/frontend.log
 # mv frontend-main/* .
 # mv static/* .
 # rm -rf frontend-main README.md
