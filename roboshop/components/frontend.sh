@@ -8,7 +8,9 @@ if [ $1 == 0 ]; then
        echo "successful"
 else 
        echo "failed"
+       exit 2
 fi
+
 }
 
 USER_ID=$(id -u)
