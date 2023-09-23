@@ -2,6 +2,15 @@
 
 #validating the user is root user or not
 
+stat()
+{
+if [ $? == 0 ]; then
+       echo "successful"
+else 
+       echo "failed"
+fi
+}
+
 USER_ID=$(id -u)
 
 if [ $USER_ID -ne 0 ]; then
@@ -17,28 +26,17 @@ echo "installing frontend"
 
 yum install nginx -y &>> /tmp/frontend.log
 
-if [ $? == 0 ]; then
-       echo "Installation successful"
-else 
-       echo "Installation failed"
-fi
+
+stat
 
 echo "starting nginx"
  systemctl enable nginx &>> /tmp/frontend.log
  systemctl start nginx &>> /tmp/frontend.log
- if [ $? == 0 ]; then
-       echo "start successful"
-else 
-       echo "start failed"
-fi
+ stat
 
 echo "downloading the frontend component"
  curl -s -L -o /tmp/frontend.zip "https://github.com/stans-robot-project/frontend/archive/main.zip"
- if [ $? == 0 ]; then
-       echo "successful"
-else 
-       echo "failed"
-fi
+ stat
 # cd /usr/share/nginx/html
 # rm -rf *
 # unzip /tmp/frontend.zip
