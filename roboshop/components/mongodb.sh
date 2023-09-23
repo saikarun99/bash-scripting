@@ -47,11 +47,16 @@ echo "updating the ip- address"
 
  echo "downloading the schema"
 
+ 
  curl -s -L -o /tmp/${component}.zip "https://github.com/stans-robot-project/mongodb/archive/main.zip"
+ stat $?
+
   echo "extracting the ${component}"
  
  cd /tmp
  unzip mongodb.zip &>> ${LOGFILE}
+
+ stat $?
 
  echo "injecting the ${component} schema"
  cd ${component}-main
