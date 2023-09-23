@@ -54,7 +54,7 @@ echo "updating the ip- address"
   echo "extracting the ${component}"
  
  cd /tmp
- unzip mongodb.zip &>> ${LOGFILE}
+ unzip -o mongodb.zip &>> ${LOGFILE}
 
  stat $?
 
