@@ -49,10 +49,15 @@ echo "downloading the frontend component"
  echo "extracting frontend"
  unzip /tmp/frontend.zip &>> /tmp/frontend.log
  stat $?
-# mv frontend-main/* .
-# mv static/* .
-# rm -rf frontend-main README.md
-# mv localhost.conf /etc/nginx/default.d/roboshop.conf
 
-#validate the user who is running the script
+ echo "sorting the frontend files"
+mv frontend-main/* .
+mv static/* .
+rm -rf frontend-main README.md
+mv localhost.conf /etc/nginx/default.d/roboshop.conf
+stat $?
+
+
+
+
  
