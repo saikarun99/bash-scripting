@@ -47,3 +47,15 @@ cd /home/${APPUSER}/${component}
 npm install &>> ${LOGFILE}
 stat $?
 
+echo "configuring the ${component} system file"
+sed -ie 's/MONGO_DNSNAME/172.31.38.68/' /home/${APPUSER}/${component}/systemd.service
+
+mv /home/${APPUSER}/${component}/systemd.service /etc/systemd/system/${component}.service
+
+echo "starting the ${component} service
+systemctl daemon-reload
+systemctl start ${component}
+systemctl enable ${component}
+stat $?
+
+echo "Installation is completed"
