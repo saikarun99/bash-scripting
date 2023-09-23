@@ -39,8 +39,10 @@ echo "starting nginx"
 echo "downloading the frontend component"
  curl -s -L -o /tmp/frontend.zip "https://github.com/stans-robot-project/frontend/archive/main.zip"
  stat $?
-# cd /usr/share/nginx/html
-# rm -rf *
+
+ echo "clean up of default front end"
+ cd /usr/share/nginx/html &>> /tmp/frontend.log
+ rm -rf * &>> /tmp/frontend.log
 # unzip /tmp/frontend.zip
 # mv frontend-main/* .
 # mv static/* .
