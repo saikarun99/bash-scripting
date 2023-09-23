@@ -47,37 +47,3 @@ cd /home/${APPUSER}/${component}
 npm install &>> ${LOGFILE}
 stat $?
 
-echo "starting nginx"
- systemctl enable nginx &>> ${LOGFILE}
- systemctl start nginx &>> ${LOGFILE}
- stat $?
-
-echo "downloading the frontend component"
- curl -s -L -o /tmp/frontend.zip "https://github.com/stans-robot-project/frontend/archive/main.zip"
- stat $?
-
- echo "clean up of default front end"
- cd /usr/share/nginx/html &>> ${LOGFILE}
- rm -rf * &>> ${LOGFILE}
-
- stat $?
-
- echo "extracting frontend"
- unzip /tmp/frontend.zip &>> ${LOGFILE}
- stat $?
-
- echo "sorting the frontend files"
-mv frontend-main/* .
-mv static/* .
-rm -rf frontend-main README.md
-mv localhost.conf /etc/nginx/default.d/roboshop.conf
-stat $?
-
-echo "restarting frontend"
-
-systemctl daemon-reload
-systemctl restart nginx
-
-
-
- 
