@@ -43,8 +43,12 @@ echo "downloading the frontend component"
  echo "clean up of default front end"
  cd /usr/share/nginx/html &>> /tmp/frontend.log
  rm -rf * &>> /tmp/frontend.log
+
+ stat $?
+
  echo "extracting frontend"
  unzip /tmp/frontend.zip &>> /tmp/frontend.log
+ stat $?
 # mv frontend-main/* .
 # mv static/* .
 # rm -rf frontend-main README.md
