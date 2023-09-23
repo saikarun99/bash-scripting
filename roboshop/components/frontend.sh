@@ -11,10 +11,8 @@ echo "Script is expected to be run by root user or with a sudo privilege \n \t E
 exit 1
 
 fi
-
-
 echo "configuring frontend"
-yum install nginx -y
+yum install nginx -y &>> /tmp/frontend.log
 # systemctl enable nginx
 # systemctl start nginx
 # curl -s -L -o /tmp/frontend.zip "https://github.com/stans-robot-project/frontend/archive/main.zip"
