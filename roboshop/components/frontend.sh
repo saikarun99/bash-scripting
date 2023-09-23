@@ -24,8 +24,8 @@ else
 fi
 
 echo "starting nginx"
- systemctl enable nginx
- systemctl start nginx
+ systemctl enable nginx &>> /tmp/frontend.log
+ systemctl start nginx &>> /tmp/frontend.log
  if [ $? == 0 ]; then
        echo "start successful"
 else 
