@@ -45,3 +45,11 @@ command 4
 fi
 
 COMMENT
+
+echo "demo on if usage"
+
+action=$1
+
+if [ action == "start" ]
+    echo "starting payment service"
+fi
