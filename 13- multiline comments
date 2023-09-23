@@ -1,6 +1,7 @@
 #!/bin/bash
 <<comment
-echo "This is devops training"
+echo "This is devops training" #multiline comments
+
 echo "I am sai karun"
 a=90
 comment
