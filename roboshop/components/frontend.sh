@@ -1,5 +1,18 @@
 #! /bin/bash
 
+#validating the user is root user or not
+
+USER_ID = $(id -u)
+
+if [ $USER_ID -ne 0 ]; then
+
+echo "Script is expected to be run by root user"
+
+exit 1
+
+fi
+
+
 echo "configuring frontend"
 yum install nginx -y
 # systemctl enable nginx
