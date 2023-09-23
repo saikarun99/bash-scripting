@@ -2,11 +2,11 @@
 
 #validating the user is root user or not
 
-USER_ID = $(id -u)
+USER_ID=$(id -u)
 
 if [ $USER_ID -ne 0 ]; then
 
-echo "Script is expected to be run by root user"
+echo "Script is expected to be run by root user or with a sudo privilege \n \t Ex: sudo wrapper.sh frontend"
 
 exit 1
 
