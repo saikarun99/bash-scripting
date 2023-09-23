@@ -50,6 +50,6 @@ echo "demo on if usage"
 
 action=$1
 
-if [ action == "start" ]; then
+if [ "$action" == "start" ]; then
     echo "starting payment service"
 fi
