@@ -5,3 +5,5 @@
 #0 represents last successfully completed action
 # 1-255 represents partial success or partial failure or failure
 echo $?
+
+#exit codes plays a key role in determining the error in big scripts
