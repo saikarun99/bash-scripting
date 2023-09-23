@@ -47,13 +47,19 @@ echo "updating the ip- address"
 
  echo "downloading the schema"
 
- curl -s -L -o /tmp/mongodb.zip "https://github.com/stans-robot-project/mongodb/archive/main.zip"
- cd /tmp &>> ${LOGFILE}
+ curl -s -L -o /tmp/${component}.zip "https://github.com/stans-robot-project/mongodb/archive/main.zip"
+  echo "extracting the ${component}"
+ 
+ cd /tmp
  unzip mongodb.zip &>> ${LOGFILE}
- cd mongodb-main &>> ${LOGFILE}
+
+ echo "injecting the ${component} schema"
+ cd ${component}-main
  mongo < catalogue.js &>> ${LOGFILE}
  mongo < users.js &>> ${LOGFILE}
  stat $?
+
+ echo "Installation is completed"
 
 
  
