@@ -4,7 +4,7 @@
 
 stat()
 {
-if [ $? == 0 ]; then
+if [ $1 == 0 ]; then
        echo "successful"
 else 
        echo "failed"
@@ -27,16 +27,16 @@ echo "installing frontend"
 yum install nginx -y &>> /tmp/frontend.log
 
 
-stat
+stat $1
 
 echo "starting nginx"
  systemctl enable nginx &>> /tmp/frontend.log
  systemctl start nginx &>> /tmp/frontend.log
- stat
+ stat $1
 
 echo "downloading the frontend component"
  curl -s -L -o /tmp/frontend.zip "https://github.com/stans-robot-project/frontend/archive/main.zip"
- stat
+ stat $1
 # cd /usr/share/nginx/html
 # rm -rf *
 # unzip /tmp/frontend.zip
