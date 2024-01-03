@@ -1,8 +1,8 @@
 #! /bin/bash
- 
- file_path="/tmp/stamp"
+file_path="/tmp/stamp"
+
  backup_dir="/opt/backup/"
- file_prefix="file_"
+ 
  file_size="200M"
 mkdir -p "$backup_dir"
 iterations=12
