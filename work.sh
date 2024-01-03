@@ -7,7 +7,7 @@ backup_dir="/opt/backup/"
 mkdir -p "$backup_dir"
 iterations=12
 for ((i=0; i<iterations; i++)); do
-    timestamp=$(date + %Y%m%d%H%M%S)
+    timestamp = $(date + %Y%m%d%H%M%S)
     file_name="/tmp/file_$timestamp.txt"
     touch "$file_name"
     echo "created file : $file_name"
